@@ -1,0 +1,48 @@
+---
+title: "Getting started with p5.js"
+date: 2021-03-26T14:42:15+01:00
+---
+
+Compared to the usual way p5.js sketches are done, to properly integrate one on a website one has to do some more work.
+While normally the js code for the sketch would look like this:
+
+{{< highlight js >}}
+function setup() {
+  let canvas = createCanvas(600, 400);
+  background(220);
+  fill(255);
+}
+function draw() {
+  if (mouseIsPressed) {
+    ellipse(mouseX, mouseY, 80, 80);
+  }
+}
+{{< / highlight >}}
+
+This works, but positions the canvas at the bottom of the document body, in a way that it looks ugly unless there is
+nothing else on the page. Instead one has to use an <a
+    href="https://p5js.org/examples/instance-mode-instance-container.html">instance container</a> - create an empty div
+with some ID and in the javascript code target that div to use for sketching. This however makes the code slightly less
+convinient:
+
+{{< highlight js >}}
+let sketch = (p) => {
+  p.setup = () => {
+    let canvas = p.createCanvas(600, 400);
+    p.background(220);
+    p.fill(255);
+  }
+  p.draw = () => {
+    if (p.mouseIsPressed) {
+      p.ellipse(p.mouseX, p.mouseY, 80, 80);
+    }
+  }
+};
+new p5(sketch, 'container');
+{{< / highlight >}}
+
+Btw, here is how it looks like:
+<div id='container'></div>
+<script src="/p5.min.js"></script>
+<script src=sketch.js></script>
+
