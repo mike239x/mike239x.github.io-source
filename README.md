@@ -11,9 +11,10 @@ Things to do:
 - port over here current mike239x.github.io
 - port over here texts from dev.to and whatever else (mb taaasty via wayback machine?)
 - Add CI via github actions and github pages - see [this](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
-- read though [hugo front matter](https://gohugo.io/content-management/front-matter/)
+- read through [hugo front matter](https://gohugo.io/content-management/front-matter/)
 - find out how to inject html/javascript into markdown pages
 - find out how to have some kind of table of contents on the main page (not just a list of posts)
 - improve the front page look overall
-- add About and Contant pages? (with menu buttons on top)
+- add About and Contact pages? (with menu buttons on top)
 - figure out how to set cover image for posts maybe? (relevant only for mizjam 1)
+- add `cascade` forn matter with `author` in it (so I don't have to write myself as author everywhere)
