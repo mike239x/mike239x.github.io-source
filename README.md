@@ -16,4 +16,4 @@ Things to do:
 - find out how to have some kind of table of contents on the main page (not just a list of posts)
 - improve the front page look overall
 - add About and Contant pages? (with menu buttons on top)
-
+- figure out how to set cover image for posts maybe? (relevant only for mizjam 1)
